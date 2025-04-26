@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seraphin | Compra y Venta de Cuentas de Juegos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+      scroll-behavior: smooth;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: #121212;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #ccc;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(#0a0a0a, #1a1a1a);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .hero.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero h1 {
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.5em;
+      max-width: 600px;
+    }
+    .section {
+      padding: 80px 50px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      background: #1a1a1a;
+      border-radius: 15px;
+      padding: 30px;
+      width: 280px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    }
+    footer {
+      background: #121212;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div><h2>Seraphin</h2></div>
+  <nav>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#juegos">Juegos</a>
+    <a href="#compra">Compra/Venta</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Domina el Juego</h1>
+  <p>Compra y vende cuentas de tus juegos favoritos de forma segura, rápida y confiable.</p>
+</section>
+
+<section id="beneficios" class="section">
+  <h2>¿Por qué elegir Seraphin?</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Seguridad Total</h3>
+      <p>Protegemos todas tus transacciones con el más alto nivel de seguridad.</p>
+    </div>
+    <div class="card">
+      <h3>Soporte 24/7</h3>
+      <p>Nuestro equipo está disponible todo el tiempo para ayudarte en cada paso.</p>
+    </div>
+    <div class="card">
+      <h3>Variedad</h3>
+      <p>Amplia selección de cuentas para todos los juegos más populares.</p>
+    </div>
+  </div>
+</section>
+
+<section id="juegos" class="section">
+  <h2>Juegos Destacados</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Fortnite</h3>
+      <p>Cuentas con skins exclusivas y progresos épicos.</p>
+    </div>
+    <div class="card">
+      <h3>League of Legends</h3>
+      <p>Consigue cuentas de alto nivel y rarezas únicas.</p>
+    </div>
+    <div class="card">
+      <h3>Valorant</h3>
+      <p>Agentes y skins desbloqueados para dominar cada partida.</p>
+    </div>
+  </div>
+</section>
+
+<section id="compra" class="section">
+  <h2>Compra y Vende con Facilidad</h2>
+  <p>Publica tu cuenta o encuentra la que buscas en segundos. Nuestro proceso es simple, rápido y seguro.</p>
+</section>
+
+<footer>
+  &copy; 2025 Seraphin. Todos los derechos reservados.
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.hero, .section').forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fondo personalizado</title>
+  <style>
+    body {
+      background-image: url('6d2b5843-8750-4807-a992-13beb1be9d68.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+</body>
+</html>
